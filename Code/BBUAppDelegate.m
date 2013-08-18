@@ -7,14 +7,15 @@
 //
 
 #import "BBUAppDelegate.h"
+#import "BBUPositionsViewController.h"
 
 @implementation BBUAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [BBUPositionsViewController new];
     [self.window makeKeyAndVisible];
     return YES;
 }
